@@ -57,7 +57,7 @@ body {
   }
 
   .section-portfolio {
-    padding-top: 96px;
+    padding-top: 48px;
     padding-bottom: 120px;
   }
 
@@ -219,7 +219,11 @@ body {
 
   .filters-list {
     color: var(--color-primary-brand);
-    margin-bottom: 72px;
+    margin-bottom: 48px;
+    gap: 24px 0px;
+    justify-content: start;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .filter-button {
@@ -796,7 +800,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 0px;
+    width: 100%;
   }
 
   .footer-form {
@@ -804,8 +808,11 @@ body {
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    width: 100%;
   }
-
+  .footer-label {
+    width: 100%;
+  }
   .footer-input {
     background-color: transparent;
     border: 1px solid var(--color-white-background);
@@ -814,7 +821,7 @@ body {
 
     padding-left: 16px;
 
-    width: 398px;
+    width: 100%;
     height: 40px;
     font-size: 12px;
     line-height: 1.5;
@@ -1102,10 +1109,9 @@ body {
   }
 
   .menu-container .social-links-list-footer {
-    flex-wrap: nowrap;
     gap: 56px;
-    justify-content: space-between;
-    width: 328px;
+    justify-content: start;
+    flex-wrap: wrap;
   }
 
   .card-set-ourteam {
