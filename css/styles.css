@@ -3108,4 +3108,17 @@ body {
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .contacts-page-title {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .ContactForm_title__yExlo {
+    margin-bottom: 20px;
+  }
+
+  .Contact_wrapper__Ye3AP {
+    margin-bottom: 40px;
+  }
 }
