@@ -1,6 +1,6 @@
 :root {
-  --color-primary-brand: #4d5ae5;
-  --color-pressed-state: #404bbf;
+  --color-primary-brand: orange;
+  --color-pressed-state: gray;
   --color-dark: #2e2f42;
   --color-success: #31d0aa;
   --color-text: #434455;
@@ -11,6 +11,7 @@
   --color-hero-background: #2e2f42;
   --color-white-background: #ffffff;
   --color-modal-background: #fcfcfc;
+  --color-gddkia: orange;
 }
 
 h1,
@@ -101,7 +102,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-primary-brand);
+    color: var(--color-gddkia);
     text-decoration: none;
     padding-top: 25.5px;
     padding-bottom: 25.5px;
@@ -167,10 +168,15 @@ body {
 
   .link:hover,
   .link:focus {
-    color: var(--color-pressed-state);
+    color: var(--color-subtle-text);
   }
   .logo-studio {
-    color: var(--color-dark);
+    color: var(--color-subtle-text);
+  }
+
+  .logo-studio:hover,
+  .logo-studio:focus {
+    color: var(--color-gddkia);
   }
 
   .list {
@@ -1175,7 +1181,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-primary-brand);
+    color: var(--color-gddkia);
     text-decoration: none;
     padding-top: 25.5px;
     padding-bottom: 25.5px;
@@ -1254,10 +1260,15 @@ body {
 
   .link:hover,
   .link:focus {
-    color: var(--color-pressed-state);
+    color: var(--color-subtle-text);
   }
   .logo-studio {
-    color: var(--color-dark);
+    color: var(--color-subtle-text);
+  }
+
+  .logo-studio:hover,
+  .logo-studio:focus {
+    color: var(--color-gddkia);
   }
 
   .list {
@@ -2227,7 +2238,7 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-primary-brand);
+    color: var(--color-gddkia);
     text-decoration: none;
     padding-top: 25.5px;
     padding-bottom: 25.5px;
@@ -2290,10 +2301,15 @@ body {
 
   .link:hover,
   .link:focus {
-    color: var(--color-pressed-state);
+    color: var(--color-subtle-text);
   }
   .logo-studio {
-    color: var(--color-dark);
+    color: var(--color-subtle-text);
+  }
+
+  .logo-studio:hover,
+  .logo-studio:focus {
+    color: var(--color-gddkia);
   }
 
   .list {
