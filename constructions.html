@@ -32,8 +32,13 @@
               <a class="menu link" href="./index.html">Zespół</a>
             </li>
             <li class="header-list">
-              <a class="menu link header-list-active" href="./portfolio.html"
-                >Badania</a
+              <a class="menu link" href="./measurements.html">Badania</a>
+            </li>
+            <li class="header-list">
+              <a
+                class="menu link header-list-active"
+                href="./constructions.html"
+                >Inwestycje</a
               >
             </li>
             <li class="header-list">
@@ -66,16 +71,18 @@
               <button type="button" class="filter-button">All</button>
             </li>
             <li class="button-list">
-              <button type="button" class="filter-button">Web Site</button>
+              <button type="button" class="filter-button">Autostrady</button>
             </li>
             <li class="button-list">
-              <button type="button" class="filter-button">App</button>
+              <button type="button" class="filter-button">
+                Drogi ekspresowe
+              </button>
             </li>
             <li class="button-list">
-              <button type="button" class="filter-button">Design</button>
+              <button type="button" class="filter-button">Drogi krajowe</button>
             </li>
             <li class="button-list">
-              <button type="button" class="filter-button">Marketing</button>
+              <button type="button" class="filter-button">TEN-T</button>
             </li>
           </ul>
           <ul class="list list-net">
@@ -99,7 +106,7 @@
                   <h2 class="header-secondary-portfolio">
                     Banking App Interface Concept
                   </h2>
-                  <p class="header-tertiary-item">App</p>
+                  <p class="header-tertiary-item">Autostrady</p>
                 </div></a
               >
             </li>
@@ -121,7 +128,7 @@
                 </div>
                 <div class="portfolio-example">
                   <h2 class="header-secondary-portfolio">Cashless Payment</h2>
-                  <p class="header-tertiary-item">Marketing</p>
+                  <p class="header-tertiary-item">Autostrady</p>
                 </div></a
               >
             </li>
@@ -143,7 +150,7 @@
                 </div>
                 <div class="portfolio-example">
                   <h2 class="header-secondary-portfolio">Meditation App</h2>
-                  <p class="header-tertiary-item">App</p>
+                  <p class="header-tertiary-item">Autostrady</p>
                 </div></a
               >
             </li>
@@ -165,7 +172,7 @@
                 </div>
                 <div class="portfolio-example">
                   <h2 class="header-secondary-portfolio">Taxi Service</h2>
-                  <p class="header-tertiary-item">Marketing</p>
+                  <p class="header-tertiary-item">Drogi ekspresowe</p>
                 </div></a
               >
             </li>
@@ -189,7 +196,7 @@
                   <h2 class="header-secondary-portfolio">
                     Screen Illustrations
                   </h2>
-                  <p class="header-tertiary-item">Design</p>
+                  <p class="header-tertiary-item">Drogi ekspresowe</p>
                 </div></a
               >
             </li>
@@ -211,7 +218,7 @@
                 </div>
                 <div class="portfolio-example">
                   <h2 class="header-secondary-portfolio">Online Courses</h2>
-                  <p class="header-tertiary-item">Marketing</p>
+                  <p class="header-tertiary-item">Drogi ekspresowe</p>
                 </div></a
               >
             </li>
@@ -235,7 +242,7 @@
                   <h2 class="header-secondary-portfolio">
                     Instagram Stories Concept
                   </h2>
-                  <p class="header-tertiary-item">Design</p>
+                  <p class="header-tertiary-item">Drogi krajowe</p>
                 </div></a
               >
             </li>
@@ -257,7 +264,7 @@
                 </div>
                 <div class="portfolio-example">
                   <h2 class="header-secondary-portfolio">Organic Food</h2>
-                  <p class="header-tertiary-item">Web Site</p>
+                  <p class="header-tertiary-item">Drogi krajowe</p>
                 </div></a
               >
             </li>
@@ -279,7 +286,29 @@
                 </div>
                 <div class="portfolio-example">
                   <h2 class="header-secondary-portfolio">Fresh Coffee</h2>
-                  <p class="header-tertiary-item">Web Site</p>
+                  <p class="header-tertiary-item">TEN-T</p>
+                </div></a
+              >
+            </li>
+            <li class="item">
+              <a class="link item-box" href="/">
+                <div class="box-box">
+                  <img
+                    src="./images/img15.jpg"
+                    alt="person carrying shopping bag"
+                    width="360"
+                    height="300"
+                  />
+
+                  <p class="header-tertiary-item app-paragraph">
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
+                  </p>
+                </div>
+                <div class="portfolio-example">
+                  <h2 class="header-secondary-portfolio">Organic Food</h2>
+                  <p class="header-tertiary-item">Drogi krajowe</p>
                 </div></a
               >
             </li>
@@ -358,5 +387,33 @@
         </div>
       </div>
     </footer>
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-button");
+      const items = document.querySelectorAll(".list-net .item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.textContent.trim();
+
+          // Usuwamy klasę 'active' ze wszystkich przycisków
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+          // Dodajemy klasę 'active' do klikniętego przycisku
+          button.classList.add("active");
+
+          items.forEach((item) => {
+            const category = item
+              .querySelector(".portfolio-example p")
+              .textContent.trim();
+
+            if (filter === "All" || category === filter) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
