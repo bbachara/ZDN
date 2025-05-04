@@ -23,6 +23,15 @@
   <body>
     <header class="header-border">
       <div class="container header-wrap">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="22">
+            <use href="./images/icons.svg#icon-menu" />
+          </svg>
+        </button>
         <nav class="navigation">
           <a class="link logo" href="./index.html"
             >GDDKiA<span class="logo-studio">-ZDN</span></a
@@ -83,9 +92,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img8.jpg"
+                    src="./images/profilog_3.jpg"
                     alt="seven screenshots of banking applications"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -106,9 +115,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img9.jpg"
+                    src="./images/planog2.jpg"
                     alt="phone over terminal"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -153,9 +162,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img11.jpg"
+                    src="./images/fwd_10.jpg"
                     alt="cockpit of a car"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -176,9 +185,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img12.jpg"
+                    src="./images/georadar_2.jpg"
                     alt="phone next to 4 miniatures of phones"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -199,9 +208,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img13.jpg"
+                    src="./images/srt_alt.jpg"
                     alt="smiling woman in orange sweater"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -222,9 +231,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img14.jpg"
+                    src="./images/retro_2.jpg"
                     alt="six cards presenting new instagram concept"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -246,9 +255,9 @@
               <a class="link item-box" href="/">
                 <div class="box-box">
                   <img
-                    src="./images/img15.jpg"
+                    src="./images/retro_pion_1.jpg"
                     alt="person carrying shopping bag"
-                    width="360"
+                    width="550"
                     height="300"
                   />
 
@@ -432,6 +441,82 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="modal-menu-top">
+        <button class="close close-btn menu-toggle js-close-menu" type="button">
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/symbol-defs-x.svg#icon-close-black-18dp-2-1" />
+          </svg>
+        </button>
+        <nav class="navigation">
+          <ul class="list nav-list">
+            <li class="header-list">
+              <a class="menu link header-list-active" href="./index.html"
+                >Zespół</a
+              >
+            </li>
+            <li class="header-list">
+              <a class="menu link" href="./measurements.html">Badania</a>
+            </li>
+            <li class="header-list">
+              <a class="menu link" href="./constructions.html">Kontrakty</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="modal-menu-bottom">
+        <address class="address-item">
+          <ul class="list list-bad">
+            <li class="header-list">
+              <a class="link-address-phone link" href="tel:+110001111111"
+                >+48 503 035 899</a
+              >
+            </li>
+
+            <li class="header-list">
+              <a
+                class="link-address link mail-to"
+                href="mailto:info@devstudio.com"
+                >bbachara@gddkia.gov.pl</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="social-links-list-footer list">
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script defer src="js/mobile-menu.js"></script>
+
     <script>
       const filterButtons = document.querySelectorAll(".filter-button");
       const items = document.querySelectorAll(".list-net .item");
