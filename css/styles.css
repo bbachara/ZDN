@@ -2270,6 +2270,10 @@ body {
     margin: 0 auto;
   }
 
+  .main-header {
+    /* padding-top: 500px; */
+  }
+
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -2543,10 +2547,12 @@ body {
   .title-section {
     margin: 0 auto;
     max-width: 1440px;
+    height: 650px; /* or keep your visual height via padding as before */
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top vertically */
     background-color: var(--color-dark);
-    padding: 188px 0;
+    padding: 30px 0 0; /* Top padding to give space from top edge */
 
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.5),
@@ -2571,6 +2577,13 @@ body {
     }
   }
 
+  .container.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* horizontal centering */
+    gap: 20px;
+  }
+
   .title-button {
     color: var(--color-white-background);
     background-color: var(--color-primary-brand);
@@ -2588,6 +2601,7 @@ body {
     min-width: 169px;
     padding: 16px 32px;
     margin: 0 auto;
+    margin-bottom: 20px;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
