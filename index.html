@@ -497,102 +497,34 @@
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="close-btn" data-modal-close>
-          <svg class="close-icon" width="8" height="8">
-            <use
-              href="./images/symbol-defs-x.svg#icon-close-black-18dp-2-1"
-            ></use>
-          </svg>
-        </button>
-        <p class="paragraph modal-paragraph">
-          Leave your contacts and we will call you back
-        </p>
-        <form class="modal-form">
-          <div class="modal-form-container">
-            <label class="modal-label" for="user-name">Name</label>
-            <div class="user-name-div">
-              <input
-                required
-                class="modal-input"
-                id="user-name"
-                name="user-name"
-                type="text"
-              />
-              <svg width="18" height="24" class="user-name-svg">
-                <use
-                  href="./images/symbol-defs-hw6.svg#icon-person-black-18dp-1"
-                ></use>
-              </svg>
-            </div>
-          </div>
-          <div class="modal-form-container">
-            <label class="modal-label" for="tel">Phone</label>
-            <div class="user-name-div">
-              <input
-                class="modal-input"
-                id="tel"
-                name="tel"
-                type="tel"
-                required
-                pattern="([0-9]{3}-[0-9]{3}-[0-9]{3}|[0-9]{9})"
-              />
-              <svg width="18" height="24" class="user-name-svg">
-                <use
-                  href="./images/symbol-defs-hw6.svg#icon-phone-black-18dp-1"
-                ></use>
-              </svg>
-            </div>
-          </div>
-          <div class="modal-form-container">
-            <label class="modal-label" for="email">Email</label>
-            <div class="user-name-div">
-              <input
-                class="modal-input"
-                id="email"
-                name="email"
-                type="email"
-                required
-              />
-              <svg width="18" height="24" class="user-name-svg">
-                <use
-                  href="./images/symbol-defs-hw6.svg#icon-email-black-18dp-1"
-                ></use>
-              </svg>
-            </div>
-          </div>
-          <div class="textarea-container">
-            <label class="modal-label" for="user-comment">Comment</label>
-            <textarea
-              class="modal-input-text textarea"
-              name="user-comment"
-              id="user-comment"
-              rows="5"
-              placeholder="Text input"
-            ></textarea>
-          </div>
-          <div class="policy">
-            <input
-              class="policy-input visually-hidden"
-              id="user-privacy"
-              type="checkbox"
-              value="true"
-              name="user-privacy"
-              required
-            />
-            <label class="policy-label" for="user-privacy">
-              <span class="modal-terms-span">
-                <svg width="10" height="8">
-                  <use href="./images/symbol-defs-hw6.svg#icon-Vector"></use>
-                </svg>
-              </span>
-              I accept the terms and conditions of the
-              <a class="policy-link" href="">Privacy Policy</a></label
-            >
-          </div>
-          <button class="button button-modal" type="submit">Send</button>
-        </form>
-      </div>
+<div class="modal">
+  <button type="button" class="close-btn" data-modal-close>
+    <svg class="close-icon" width="8" height="8">
+      <use href="./images/symbol-defs-x.svg#icon-close-black-18dp-2-1"></use>
+    </svg>
+  </button>
+
+  <div class="gallery-modal-content" id="galleryContainer">
+    <button class="gallery-arrow left" id="prevBtn">&#10094;</button>
+
+    <img
+      id="galleryImage"
+      src="./images/gallery/image1.jpg"
+      alt="Gallery Image"
+      class="gallery-image fade"
+    />
+
+    <button class="gallery-arrow right" id="nextBtn">&#10095;</button>
+
+    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+  </div>
+
+  <div class="thumbnail-container" id="thumbnailContainer">
+    <!-- Thumbnails will be injected here -->
+  </div>
+</div>
+
+
     </div>
     <div class="menu-container js-menu-container" id="mobile-menu">
       <div class="modal-menu-top">

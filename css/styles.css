@@ -10,7 +10,7 @@
   --color-modal-overlay: #2e2f4266;
   --color-hero-background: #2e2f42;
   --color-white-background: #ffffff;
-  --color-modal-background: #fcfcfc;
+  --color-modal-background: #2e2f4266;
   --color-gddkia: orange;
   --color-bg: #ffffff;
   --color-text: #434455;
@@ -725,6 +725,8 @@ body {
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(6px); /* <-- This adds the blur */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
   }
 
   /* modal */
@@ -738,7 +740,7 @@ body {
     min-height: 584px;
     border-radius: 4px;
     background: var(--color-modal-background);
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.4),
       0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px;
@@ -1902,6 +1904,8 @@ body {
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(6px); /* <-- This adds the blur */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
   }
 
   /* modal */
@@ -1915,7 +1919,7 @@ body {
     min-height: 584px;
     border-radius: 4px;
     background: var(--color-modal-background);
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.4),
       0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px;
@@ -2916,6 +2920,8 @@ body {
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(6px); /* <-- This adds the blur */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
   }
 
   /* modal */
@@ -2925,11 +2931,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-    min-height: 584px;
+    min-width: 408px;
+    min-height: 484px;
     border-radius: 4px;
     background: var(--color-modal-background);
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.4),
       0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px;
@@ -3359,4 +3365,117 @@ body {
 
 .header-tertiary-item span a {
   color: var(--color-dark-primary);
+}
+
+.gallery-modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  user-select: none;
+}
+
+.gallery-arrow.left {
+  left: 10px;
+}
+
+.gallery-arrow.right {
+  right: 10px;
+}
+
+.gallery-modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery-image {
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.gallery-arrow.left {
+  left: 10px;
+}
+
+.gallery-arrow.right {
+  right: 10px;
+}
+
+.fullscreen-btn {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+}
+
+.thumbnail-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+.fade {
+  opacity: 0;
+}
+
+.fade.show {
+  opacity: 1;
 }
