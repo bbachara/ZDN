@@ -77,6 +77,7 @@
     "./images/gallery/image3.jpg",
     "./images/gallery/image4.jpg",
     "./images/gallery/image5.jpg",
+    "./images/gallery/image6.jpg",
   ];
   let currentIndex = 0;
 
