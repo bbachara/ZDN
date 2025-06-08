@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zespół Diagnostyki Nawierzchni</title>
+    <title>Zespół Diagnostyki Nawierzchni - łata i klin</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -11,9 +11,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Główny styl aplikacji React -->
-    <link rel="stylesheet" href="./js/build/static/css/main.593240cb.css" />
 
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,6 +23,15 @@
   <body>
     <header class="header-border">
       <div class="container header-wrap">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="22">
+            <use href="./images/icons.svg#icon-menu" />
+          </svg>
+        </button>
         <nav class="navigation">
           <a class="link logo" href="./index.html"
             >GDDKiA<span class="logo-studio">-ZDN</span></a
@@ -35,15 +41,15 @@
               <a class="menu link" href="./index.html">Zespół</a>
             </li>
             <li class="header-list">
-              <a class="menu link" href="./measurements.html">Badania</a>
+              <a class="menu link header-list-active" href="./measurements.html"
+                >Badania</a
+              >
             </li>
             <li class="header-list">
               <a class="menu link" href="./constructions.html">Inwestycje</a>
             </li>
             <li class="header-list">
-              <a class="menu link header-list-active" href="./contacts.html"
-                >Kontakt</a
-              >
+              <a class="menu link" href="./contacts.html">Kontakt</a>
             </li>
           </ul>
         </nav>
@@ -66,12 +72,8 @@
     <main>
       <section class="section-portfolio">
         <div class="container">
-          <h1 class="title-empty visually-hidden">Empty header</h1>
-          <p class="contacts-page-title">
-            This is notepad page created by Bart
-          </p>
-          <!-- Element, w którym aplikacja React zostanie wyrenderowana -->
-          <div id="react-phonebook"></div>
+          <h2 class="header-secondary">Równość podłużna nawierzchni - łata i klin</h2>
+
         </div>
       </section>
     </main>
@@ -147,7 +149,108 @@
       </div>
     </footer>
 
-    <!-- React Scripts -->
-    <script src="./js/build/static/js/main.db1891cf.js"></script>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="modal-menu-top">
+        <button class="close close-btn menu-toggle js-close-menu" type="button">
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/symbol-defs-x.svg#icon-close-black-18dp-2-1" />
+          </svg>
+        </button>
+        <nav class="navigation">
+          <ul class="list nav-list">
+            <li class="header-list">
+              <a class="menu link header-list-active" href="./index.html"
+                >Zespół</a
+              >
+            </li>
+            <li class="header-list">
+              <a class="menu link" href="./measurements.html">Badania</a>
+            </li>
+            <li class="header-list">
+              <a class="menu link" href="./constructions.html">Kontrakty</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="modal-menu-bottom">
+        <address class="address-item">
+          <ul class="list list-bad">
+            <li class="header-list">
+              <a class="link-address-phone link" href="tel:+110001111111"
+                >+48 503 035 899</a
+              >
+            </li>
+
+            <li class="header-list">
+              <a
+                class="link-address link mail-to"
+                href="mailto:info@devstudio.com"
+                >bbachara@gddkia.gov.pl</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="social-links-list-footer list">
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="elipse-footer">
+            <a class="social-link-footer" href="">
+              <svg width="24" height="24" class="elipse-icon">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script defer src="js/mobile-menu.js"></script>
+
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-button");
+      const items = document.querySelectorAll(".list-net .item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.textContent.trim();
+
+          // Usuwamy klasę 'active' ze wszystkich przycisków
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+          // Dodajemy klasę 'active' do klikniętego przycisku
+          button.classList.add("active");
+
+          items.forEach((item) => {
+            const category = item
+              .querySelector(".portfolio-example p")
+              .textContent.trim();
+
+            if (filter === "All" || category === filter) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,134 @@
+/* === Podstawowe (desktop) === */
+.profilograf-section {
+  background-color: #f9f9f9;
+  padding: 80px 40px;
+  font-family: 'Roboto', sans-serif;
+  color: #2c2c2c;
+}
+
+.profilograf-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profilograf-section h2 {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profilograf-section h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  color: #0056b3;
+}
+
+.profilograf-section p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.profilograf-section ul,
+.profilograf-section ol {
+  padding-left: 24px;
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.profilograf-section li {
+  margin-bottom: 10px;
+}
+
+.profilograf-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 24px auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.profilograf-section .summary {
+  background: #e9f7ef;
+  padding: 16px;
+  border-left: 5px solid #28a745;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+/* === Tablet (max-width: 991px) === */
+@media (max-width: 991px) {
+  .profilograf-section {
+    padding: 60px 30px;
+  }
+
+  .profilograf-section h2 {
+    font-size: 30px;
+  }
+
+  .profilograf-section h3 {
+    font-size: 22px;
+  }
+
+  .profilograf-section p,
+  .profilograf-section ul,
+  .profilograf-section ol {
+    font-size: 16px;
+  }
+
+  .profilograf-image {
+    max-width: 100%;
+  }
+}
+
+/* === Mobile (max-width: 576px) === */
+@media (max-width: 576px) {
+  .profilograf-section {
+    padding: 40px 20px;
+  }
+
+  .profilograf-section h2 {
+    font-size: 24px;
+  }
+
+  .profilograf-section h3 {
+    font-size: 20px;
+  }
+
+  .profilograf-section p,
+  .profilograf-section ul,
+  .profilograf-section ol {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .profilograf-section .summary {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+
+/* === Animacje wejścia === */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Opcjonalne opóźnienia – różnicowanie animacji */
+.animate:nth-child(1) { animation-delay: 0.1s; }
+.animate:nth-child(2) { animation-delay: 0.2s; }
+.animate:nth-child(3) { animation-delay: 0.3s; }
+/* Dodaj więcej w razie potrzeby */

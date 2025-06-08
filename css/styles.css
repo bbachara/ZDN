@@ -353,16 +353,19 @@ body {
   .title-section {
     margin: 0 auto;
     max-width: 1440px;
+    height: 650px; 
     display: flex;
+     flex-direction: column;
+    justify-content: flex-start; 
     align-items: center;
     background-color: var(--color-dark);
-    padding: 188px 0;
+    padding: 30px 0 0;
 
     background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
+        rgba(46, 47, 66, 0.5),
+        rgba(46, 47, 66, 0.5)
       ),
-      url("../images/people-office.jpg");
+      url("../images/planog2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -374,10 +377,10 @@ body {
     (min-resolution: 2dppx) {
     .title-section {
       background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
+          rgba(46, 47, 66, 0.5),
+          rgba(46, 47, 66, 0.5)
         ),
-        url("../images/people-office@2x.jpg");
+        url("../images/planog2.jpg");
     }
   }
 
@@ -398,6 +401,7 @@ body {
     min-width: 169px;
     padding: 16px 32px;
     margin: 0 auto;
+    margin-bottom: 30px;;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -1531,16 +1535,19 @@ body {
   .title-section {
     margin: 0 auto;
     max-width: 1440px;
+    height: 650px;
     display: flex;
     align-items: center;
+        flex-direction: column;
+    justify-content: flex-start;
     background-color: var(--color-dark);
-    padding: 188px 0;
+    padding: 30px 0 0;
 
     background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
+        rgba(46, 47, 66, 0.5),
+        rgba(46, 47, 66, 0.5)
       ),
-      url("../images/people-office.jpg");
+      url("../images/planog2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1555,7 +1562,7 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url("../images/people-office@2x.jpg");
+        url("../images/planog2.jpg");
     }
   }
 
@@ -1576,6 +1583,7 @@ body {
     min-width: 169px;
     padding: 16px 32px;
     margin: 0 auto;
+    margin-bottom: 40px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -2577,7 +2585,7 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url("../images/people-office@2x.jpg");
+        url("../images/planog2.jpg");
     }
   }
 
